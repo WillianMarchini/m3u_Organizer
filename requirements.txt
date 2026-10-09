@@ -1,0 +1,35 @@
+# requirements.txt
+# ---------------------------------------------------------------------------
+# Dependencias do Organizador M3U
+#
+# A aplicacao roda APENAS com a biblioteca padrao do Python (tkinter +
+# sqlite3). Os pacotes abaixo sao OPCIONAIS e apenas melhoram a experience:
+#
+#   pip install -r requirements.txt          # instala os opcionais
+#   pip install -r requirements.txt --no-deps
+#
+# Se preferir so o essencial, descomente a secao "Minimo obrigatorio".
+# ---------------------------------------------------------------------------
+
+
+# ----------------------------- Minimo obrigatorio ---------------------------
+# Nada a instalar: tkinter e sqlite3 ja vem com o Python.
+# No Linux, o tkinter pode precisar ser instalado pelo sistema:
+#   sudo apt install python3-tk
+#
+# ATENCAO: nao instale "tkinter" via pip. O pacote com esse nome no PyPI
+# nao e o modulo oficial e pode quebrar o ambiente.
+
+
+# ------------------------------- Opcionais ---------------------------------
+
+# Exibe a imagem (logo) do canal no painel de video.
+# Sem pillow, o painel fica vazio e mostra apenas o endereco do stream.
+pillow>=10.0.0
+
+# Reproduz o stream de video dentro do painel.
+# Requer tambem o VLC media player instalado no sistema:
+#   https://www.videolan.org/vlc/
+# Sem python-vlc, o botao "Abrir no navegador" continua funcionando.
+python-vlc>=3.0.20123
+customtkinter==5.2.2
